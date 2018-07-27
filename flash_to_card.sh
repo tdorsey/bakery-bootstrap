@@ -2,7 +2,7 @@
 FLASH_VERSION=2.1.1
 HYPRIOT_VERSION=1.9.0
 
-if tes t "$#" -ne 2
+if test "$#" -ne 2
  then
     echo "Usage: $0 <CLOUD-INIT> <BLOCK DEVICE>"
     exit 1
