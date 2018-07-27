@@ -1,0 +1,5 @@
+[rtd3.me]
+rtd3.me:2200 ansible_user=ansible
+
+[local]
+localhost ansible_connection=local
