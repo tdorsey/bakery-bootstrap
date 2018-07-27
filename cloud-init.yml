@@ -15,7 +15,7 @@ runcmd:
   - 
     - git
     - clone
-    - "https://github.com/tdorsey/blind-bake/"
+    - "git@github.com:tdorsey/blind-bake/"
   - 
     - cd
     - blind-bake
