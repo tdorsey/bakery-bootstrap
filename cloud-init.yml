@@ -1,41 +1,36 @@
-#cloud-config
-
+#cloud-config 
+apt_preserve_sources_list: true
+apt_sources: 
+  - 
+    source: "ppa:ansible/ansible"
 hostname: palmetto
 manage_etc_hosts: true
-
-apt_preserve_sources_list: true
-apt_sources:
- - source: "ppa:ansible/ansible"   
-
-
+package_reboot_if_required: true
 package_update: true
 package_upgrade: true
-package_reboot_if_required: true
-packages:
+packages: 
   - git
-  -ansible
-
-users:
-  - name: ansible                
+  - ansible
+runcmd: 
+  - 
+    - git
+    - clone
+    - "https://github.com/tdorsey/blind-bake/"
+  - 
+    - cd
+    - blind-bake
+  - 
+    - runcmd.sh
+users: 
+  - 
+    groups: users
+    lock_passwd: true
+    name: ansible
     primary-group: users
     shell: /bin/bash
-    sudo: ALL=(ALL) NOPASSWD:ALL
-    groups: users
-    ssh-import-id: gh: tdorsey
-    lock_passwd: true
-
-write_files:
-  - path: /etc/ansible/hosts
-    content: |
-    [rtd3.me]
-    rtd3.me:2200 ansible_user=tommy
-    [local]
-    localhost ansible_connection=local
-runcmd:
-  - [git, clone, https://github.com/tdorsey/blind-bake/]
-  - [cd, blind-bake]
-  - [runcmd.sh]
-
-
-
-
+    ssh-import-id: "gh: tdorsey"
+    sudo: "ALL=(ALL) NOPASSWD:ALL"
+write_files: 
+  - 
+    content: "| [rtd3.me] rtd3.me:2200 ansible_user=tommy [local] localhost ansible_connection=local"
+    path: /etc/ansible/hosts
