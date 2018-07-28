@@ -28,7 +28,7 @@ users:
     name: ansible
     primary-group: users
     shell: /bin/bash
-    ssh-import-id: "gh: tdorsey"
+    ssh-import-id: "gh:tdorsey"
     sudo: "ALL=(ALL) NOPASSWD:ALL"
 write_files: 
   - 
