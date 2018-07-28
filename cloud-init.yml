@@ -23,7 +23,7 @@ runcmd:
     - runcmd.sh
 users: 
   - 
-    groups: users
+    groups: ssh-users
     lock_passwd: true
     name: ansible
     primary-group: users
