@@ -24,8 +24,9 @@ runcmd:
 users: 
   - 
     groups: ssh-users
-    lock_passwd: true
+    lock_passwd: false
     name: ansible
+    password: "$1$AxH8DNKb$k2l4uBuVz.eqqe.emHb8R0"
     primary-group: users
     shell: /bin/bash
     ssh-import-id: "gh:tdorsey"
