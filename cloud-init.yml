@@ -1,26 +1,15 @@
 #cloud-config 
 apt_preserve_sources_list: true
-#apt_sources: 
-#  - 
-#    source: "ppa:ansible/ansible"
 hostname: palmetto
 manage_etc_hosts: true
 package_reboot_if_required: true
 package_update: true
 package_upgrade: true
+ssh_deletekeys: true
+ssh_genkeytypes: ed25519
 packages: 
   - git
   - ansible
-#runcmd: 
-#  - 
-#    - git
-#    - clone
-#    - "git@github.com:tdorsey/blind-bake/"
-#  - 
-#    - cd
-#    - blind-bake
-#  - 
-#    - runcmd.sh
 users: 
     name: ansible
     lock_passwd: true
