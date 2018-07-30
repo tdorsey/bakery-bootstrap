@@ -22,10 +22,8 @@ runcmd:
   - 
     - runcmd.sh
 users: 
-  - 
-    lock_passwd: true
     name: ansible
-    primary-group: users
+    lock_passwd: true
     shell: /bin/bash
     ssh_authorized_keys:
       - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
