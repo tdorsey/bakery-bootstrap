@@ -22,6 +22,12 @@ runcmd:
   - 
     - runcmd.sh
 users: 
+  -
+    lock_passwd: false
+    name: tommy
+    password: :$6$A.dNNed7$dvhv/iY3MAsmLnxxJYJAzsWMdpSlOcfjui52Il8JNbGJDOH6gVzHpY53t.bT966bhpLCXh1mwvrfGFbRq817l1
+    shell: /bin/bash
+    sudo: "ALL=(ALL) NOPASSWD: ALL  
   - 
     groups: ssh-users
     lock_passwd: false
