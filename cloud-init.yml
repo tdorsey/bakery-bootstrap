@@ -23,12 +23,12 @@ runcmd:
     - runcmd.sh
 users: 
   - 
-    groups: ssh-users
     lock_passwd: true
     name: ansible
     primary-group: users
     shell: /bin/bash
-    ssh-import-id: "gh:tdorsey"
+    ssh_authorized_keys:
+      - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
     sudo: "ALL=(ALL) NOPASSWD:ALL"
 write_files: 
   - 
