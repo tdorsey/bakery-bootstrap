@@ -18,7 +18,7 @@ chmod +x flash
 sudo mv flash $FLASH_PATH
 
 #Flash the drive
-flash -u $1 -d $2 https://github.com/hypriot/image-builder-rpi/releases/download/v$HYPRIOT_SEMVER/hypriotos-rpi-v$HYPRIOT_VERSION.img.zip
+flash -u $1 -d $2 https://github.com/hypriot/image-builder-rpi/releases/download/v$HYPRIOT_VERSION/hypriotos-rpi-v$HYPRIOT_VERSION.img.zip
 
 
 
