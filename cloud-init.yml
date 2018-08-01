@@ -11,7 +11,10 @@ packages:
   - git
   - ansible
 users: 
-    - default 
+    - default
+    - name: test
+      lock_passwd: false
+      password: "$1$5GaB8j/m$KYZCVZn8JR.iTroe2PiL80" 
     - name: ansible
       lock_passwd: true
       shell: /bin/bash
