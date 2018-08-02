@@ -10,6 +10,9 @@ rm -f /etc/ssh/ssh_host_rsa_key*
 rm -f /etc/ssh/ssh_host_rsa_key*
 rm -f /etc/ssh/ssh_host_ed25519_key*
 
+#Some OSes don't have the import ssh module, run it here after the package has been manually installed
+ssh-import-id "gh:tdorsey"
+
 #Generate new host key with 100 rounds
 #No passphrase, hide output
 ssh-keygen -a 100 -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N "" < /dev/null

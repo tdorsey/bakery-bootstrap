@@ -16,10 +16,9 @@ runcmd:
     - git
     - clone
     - "https://github.com/tdorsey/blind-bake/"
-    - `$PWD/blind-bake`
   - 
     - cd 
-    - `$PWD/blind-bake`
+    - blind-bake
   - 
     - chmod
     -  +x 
@@ -30,12 +29,13 @@ users:
     - name: ansible
       lock_passwd: true
       shell: /bin/bash
-      ssh_import_id: "gh:tdorsey"
       ssh_authorized_keys:
         - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
       sudo: "ALL=(ALL) NOPASSWD:ALL"
 
 write_files: 
   - 
-    content: "| [rtd3.me] rtd3.me:2200 ansible_user=tommy [local] localhost ansible_connection=local"
+    content: "|
+    [rtd3.me] rtd3.me:2200 ansible_user=tommy 
+    [local] localhost ansible_connection=local"
     path: /etc/ansible/hosts
