@@ -29,13 +29,15 @@ users:
     - name: ansible
       lock_passwd: true
       shell: /bin/bash
-      ssh_authorized_keys:
-        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
+#      ssh_authorized_keys:
+#        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
       sudo: "ALL=(ALL) NOPASSWD:ALL"
 
 write_files: 
   - 
     content: "|
-    [rtd3.me] rtd3.me:2200 ansible_user=tommy 
-    [local] localhost ansible_connection=local"
+    [rtd3.me]
+    rtd3.me:2200 ansible_user=tommy 
+    [local] 
+    localhost ansible_connection=local"
     path: /etc/ansible/hosts
