@@ -12,7 +12,7 @@ rm -f /etc/ssh/ssh_host_ed25519_key*
 
 #Some OSes don't have the import ssh module, run it here after the package has been manually installed
 echo "Importing SSH ID"
-ssh-import-id gh:tdorsey
+ssh-import-id "gh:tdorsey"
 exit 0
 #Generate new host key with 100 rounds
 #No passphrase, hide output
