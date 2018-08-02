@@ -10,11 +10,12 @@ ssh_genkeytypes: ed25519
 packages: 
   - git
   - ansible
+  - ssh_import_id
 runcmd: 
   - 
     - git
     - clone
-    - "https://github.com/tdorsey/blind-bake/"
+    - "https://github.com/tdorsey/blind-bake"
   - 
     - cd
     - blind-bake
@@ -24,6 +25,8 @@ users:
     - name: ansible
       lock_passwd: true
       shell: /bin/bash
+      ssh_import_id:
+        - "gh:tdorsey"
       ssh_authorized_keys:
         - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
       sudo: "ALL=(ALL) NOPASSWD:ALL"
