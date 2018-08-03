@@ -5,7 +5,7 @@ PLAYBOOKS=$ANSIBLE/playbooks
 CONF=conf
 
 #Explicitly set the home varible or ssh-import-id fails to a bug
-HOME=/home/ansible
+export HOME=/home/ansible
 
 CYAN='\033[0;36m'
 NOCOLOR='\033[0m' 
