@@ -16,7 +16,6 @@ rm -f /etc/ssh/ssh_host_ed25519_key*
 echo -e " ${CYAN} Importing SSH ID "
 ssh-import-id gh:tdorsey
 echo -e "${NOCOLOR}"
-exit 0
 #Generate new host key with 100 rounds
 #No passphrase, hide output
 ssh-keygen -a 100 -t ed25519 -f /etc/ssh/ssh_host_ed25519_key -N "" < /dev/null
