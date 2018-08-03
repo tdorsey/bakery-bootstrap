@@ -4,6 +4,8 @@ ANSIBLE=ansible
 PLAYBOOKS=$ANSIBLE/playbooks
 CONF=conf
 
+CYAN='\033[0;36m'
+NOCOLOR='\033[0m' 
 #Secure SSH
 rm -f /etc/ssh/ssh_host_dsa_key*
 rm -f /etc/ssh/ssh_host_rsa_key*
@@ -11,8 +13,9 @@ rm -f /etc/ssh/ssh_host_rsa_key*
 rm -f /etc/ssh/ssh_host_ed25519_key*
 
 #Some OSes don't have the import ssh module, run it here after the package has been manually installed
-echo "Importing SSH ID"
-ssh-import-id "gh:tdorsey"
+echo -e " ${CYAN} Importing SSH ID "
+ssh-import-id gh:tdorsey
+echo -e "${NOCOLOR}"
 exit 0
 #Generate new host key with 100 rounds
 #No passphrase, hide output
