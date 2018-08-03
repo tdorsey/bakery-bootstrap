@@ -41,3 +41,9 @@ write_files:
     [local] 
     localhost ansible_connection=local"
     path: /etc/ansible/hosts
+  -
+    path: /etc/environment
+    permissions: 0644
+    content: "|
+    HOME=/home/$USER"
+     
