@@ -35,10 +35,10 @@ users:
 
 write_files: 
   - 
-    content: |
+    content: "|
     [rtd3.me]
     rtd3.me:2200 ansible_user=tommy 
     [local] 
-    localhost ansible_connection=local
+    localhost ansible_connection=local"
     path: /etc/ansible/hosts
      
