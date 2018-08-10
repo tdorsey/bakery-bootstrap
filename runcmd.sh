@@ -40,7 +40,7 @@ cd $PLAYBOOKS
 shopt -s nullglob
 for i in *.yml; do
     echo "Running ansible playbook $i"
-    ansible-playbook -l local $i
+    ansible-playbook -l localhost $i
 done
 
 
