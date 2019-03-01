@@ -1,4 +1,4 @@
-- src: morbidick.semaphore
-- src:  robertdebock.bootstrap
-- src:  robertdebock.xinetd
-- src:  robertdebock.tftpd
+#- src: morbidick.semaphore
+#- src:  robertdebock.bootstrap
+#- src:  robertdebock.xinetd
+#- src:  robertdebock.tftpd

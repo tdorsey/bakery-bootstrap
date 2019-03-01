@@ -43,4 +43,7 @@ for i in *.yml; do
     ansible-playbook -l localhost $i
 done
 
+#Install k3s
+echo "Installing k3s"
+    curl -sfL https://get.k3s.io | sh -
 

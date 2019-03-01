@@ -30,7 +30,7 @@ users:
       lock_passwd: true
       shell: /bin/bash
       ssh_authorized_keys:
-        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMP4JuQ8em8cm+YDHK/CXXyMFLq7jO37fXmZAaDmyw6U"
+        - "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAmu+HRvtCU2l4Y223plOOIKLSOPRdv7M8Y0B8u1PdO5"
       sudo: "ALL=(ALL) NOPASSWD:ALL"
 
 write_files: 
